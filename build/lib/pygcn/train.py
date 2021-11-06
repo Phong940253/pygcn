@@ -9,7 +9,7 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-from pygcn.utils import load_data_book, accuracy
+from pygcn.utils import load_data, accuracy
 from pygcn.models import GCN
 
 # Training settings
@@ -39,7 +39,7 @@ if args.cuda:
     torch.cuda.manual_seed(args.seed)
 
 # Load data
-adj, features, labels, idx_train, idx_val, idx_test = load_data_book()
+adj, features, labels, idx_train, idx_val, idx_test = load_data()
 
 # Model and optimizer
 model = GCN(nfeat=features.shape[1],

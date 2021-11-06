@@ -52,9 +52,6 @@ def load_data(path="../data/cora/", dataset="cora"):
 
     return adj, features, labels, idx_train, idx_val, idx_test
 
-def load_data_book(dataset="book-crossing"):
-    # idx_features_labels = 
-    print('Loading {} dataset...'.format(dataset))
 
 def normalize(mx):
     """Row-normalize sparse matrix"""
